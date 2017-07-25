@@ -50,7 +50,7 @@ class ViewController: UIViewController,
             musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = -1
-            musicPlayer.volume = 0.5
+            musicPlayer.volume = 0.1
             musicPlayer.play()
         } catch let err as NSError {
             print(err.debugDescription)

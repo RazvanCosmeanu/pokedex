@@ -138,9 +138,10 @@ class Pokemon {
                     if let nextEvo = evolutions[0]["to"] as? String {
                         if nextEvo.range(of: "mega") == nil {
                             self._nextEvolutionName = nextEvo
+                            
                             if let uri = evolutions[0]["resource_uri"] as? String {
                                 let evoId = uri.replacingOccurrences(of: "/api/v1/pokemon/", with: "")
-                                                .replacingOccurrences(of: "/", with: "")
+                                               .replacingOccurrences(of: "/", with: "")
                                 
                                 self._nextEvolutionId = evoId
                                 
